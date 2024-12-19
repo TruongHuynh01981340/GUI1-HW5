@@ -1,0 +1,69 @@
+<!-- 
+    Name: Truong-Thinh Huynh SID: 01981340
+    GitHub Username: TruongHuynh01981340
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    </head>
+    <body>
+        <p id="word">Word: </p>
+        <p id="totalScore">Score: 0</p>
+        <button id="restartButton">Restart</button><br><br>
+        <button id="nextButton">Next</button><br><br>
+        <img id="scrabbleBoard" src="./Scrabble_Board_OneLine.png">
+        <img id="scrabbleTileHolder" src="./scrabble-tile-holder-406774_640.png">
+        
+        <!--
+            My idea for how the draggable tile will be able to snap onto the game board or tile holder
+            is by using blank tile given to us and make them disappear, which I then can use it as a droppable.
+        -->
+            
+        <!-- draggableTileContainer contains images that will be randomized when the game runs. -->
+        <div class="draggableTileContainer">    
+            <img id="scrabbleTile1" class="draggableTile" src="./Scrabble_Tiles/Scrabble_Tile_A.jpg">
+            <img id="scrabbleTile2" class="draggableTile" src="./Scrabble_Tiles/Scrabble_Tile_A.jpg">
+            <img id="scrabbleTile3" class="draggableTile" src="./Scrabble_Tiles/Scrabble_Tile_A.jpg">
+            <img id="scrabbleTile4" class="draggableTile" src="./Scrabble_Tiles/Scrabble_Tile_A.jpg">
+            <img id="scrabbleTile5" class="draggableTile" src="./Scrabble_Tiles/Scrabble_Tile_A.jpg">
+            <img id="scrabbleTile6" class="draggableTile" src="./Scrabble_Tiles/Scrabble_Tile_A.jpg">
+            <img id="scrabbleTile7" class="draggableTile" src="./Scrabble_Tiles/Scrabble_Tile_A.jpg">
+        </div>
+
+         <!-- droppableTileContainer contains blank images that will be use for snapping draggable onto the game board..-->
+        <div class="droppableTileContainer">
+            <img id="droppableTile1" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile2" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile3" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile4" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile5" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile6" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile7" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile8" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile9" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile10" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile11" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile12" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile13" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile14" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="droppableTile15" class="droppableTile" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+        </div>
+        
+        <!-- TtileHolderContainer contains blank images that will be use for snapping draggable onto the tile holder.-->
+        <div class="tileHolderContainer">
+            <img id="tileHolder1" class="tileHolder" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="tileHolder2" class="tileHolder" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="tileHolder3" class="tileHolder" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="tileHolder4" class="tileHolder" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="tileHolder5" class="tileHolder" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="tileHolder6" class="tileHolder" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+            <img id="tileHolder7" class="tileHolder" src="./Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+        </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="functionality.js"></script>
+    </body>
+</html>

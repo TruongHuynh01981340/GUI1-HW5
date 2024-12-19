@@ -1,0 +1,100 @@
+/*
+    Name: Truong-Thinh Huynh SID: 01981340
+    GitHub Username: TruongHuynh01981340
+*/
+
+body {
+    background-color: bisque;
+}
+
+#scrabbleBoard {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#scrabbleTileHolder {
+    max-width: 50%;
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    margin-top: 15%;
+    left: 25%;
+    z-index: 1;
+}
+
+/*
+    Set 7 draggables that the user can interact with.
+*/
+.draggableTileContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1;
+    left: 30%;
+    margin-top: -10%;
+    position: relative;
+    width: 40%;
+}
+
+/*
+    Set z-index 3 because the draggable have to be the top of top, meaning no other ui elements should be
+    on top of it.
+*/
+.draggableTileContainer img {
+    max-width: 100%;
+    width: 100%;
+    opacity: 1;
+    z-index: 3;
+}
+
+/*
+    Set 15 droppable tile for the game board
+    z-index 2 so the draggable tile when snapped will be on top of the game board.
+*/
+
+.droppableTileContainer {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    position: relative;
+    margin-top: -33.3%;
+    gap: 0.5px;
+    z-index: 2;
+    width: 100%;
+}
+
+/*
+    Make the droppable disappear since we don't need to see that, only the game board. 
+    And doing this also keeps the snap working when draggable is snapped on.
+*/
+.droppableTileContainer img {
+    max-width: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 2;
+}
+
+/*
+    Set 7 droppable tile for the tile holder
+*/
+.tileHolderContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1;
+    left: 30%;
+    margin-top: 19.7%;
+    position: relative;
+    width: 40%;
+}
+
+/*
+    Set z-index 2 so the draggable will be on top of the tile holder.
+*/
+.tileHolderContainer img {
+    max-width: 100%;
+    width: 100%;
+    opacity: 50%;
+    z-index: 2;
+}
